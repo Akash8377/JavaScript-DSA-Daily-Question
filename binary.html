@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <h1></h1>
+    <script>
+     function binary(data){
+    let indexNumber = undefined
+    let start = 0;
+    let end = data.length-1
+    let find = 17;
+    while(start<=end){
+       debugger;
+        let midPoint = Math.floor((start+end)/2)
+        if(data[midPoint]===find){
+            debugger;
+            indexNumber=midPoint
+            break;
+            debugger;
+        }
+        else if(data[midPoint]<find){
+            debugger;
+            start=midPoint+1
+            debugger;
+        }
+        else if(data[midPoint]>find){
+           end=midPoint-1
+           debugger;
+        }
+    }
+    if(indexNumber==undefined){
+        debugger;
+        console.log("Element not found")
+    }else{
+        console.log(indexNumber)
+    }
+}
+console.log(binary([1,2,3,6,8,9,11,13,15,16,17,19]))
+    </script>
+</body>
+
+</html>
